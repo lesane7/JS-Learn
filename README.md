@@ -1,2 +1,2 @@
-# JS-excercises
+# JS-Learn
 Learn about JS
