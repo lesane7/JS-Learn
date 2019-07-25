@@ -13,8 +13,38 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "A Promising
   Promise"
 */
+const pElement = document.querySelector('#exercise1');
+let food = 'Hamburguesa';
+let valor = 'Init';
+functionA(food).then(response =>{
+  console.log("It's Ready");
+  valor = response;
+  pElement.innerHTML = response;
+}).catch(response =>{
+  console.log('paila');
+  pElement.innerHTML = res 
+});
+pElement.innerHTML = 'Adios';
+console.log(pElement);
+
 function exercise1() {
   var promise1 = resolvedPromise()
+}
+
+function functionA(food) {
+  console.log('Now Begins!');
+  return new Promise((resolve, reject) => {
+    setTimeout(() => 
+    {
+      if (food === 'Hamburguesa') {
+        resolve('Enjoy the burger');
+      }else{
+        reject('No there')
+      }
+    }
+  , 2000)
+}
+)
 }
 
 /*

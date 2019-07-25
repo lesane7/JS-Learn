@@ -45,4 +45,11 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
 
-console.log(PasswordValidationResult)
+let er1 = /[0-9]/;
+let er2 = /[a-z]/;
+let er3 = /[A-Z]/;
+
+
+PasswordValidationResult = password.map(item => er1.test(item) && er2.test(item) && er3.test(item) && item.length > 5); //valida si en el rango de password contiene los caracteres y retorna booleano
+
+console.log(PasswordValidationResult);
