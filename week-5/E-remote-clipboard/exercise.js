@@ -32,12 +32,18 @@ var postRequestParameters = {
     }
 };
 
-fetch(/* Write the API address here */, postRequestParameters);
+fetch("https://codeyourfuture.herokuapp.com/api/clipboard", postRequestParameters).then(function(response) {
+    console.log(response.text());
+  });
 
 
 // Task 2: Load an existing clipboard
 // Add your code below
 
-fetch(/* ... */).then(function(response) {
-    return response.text();
-}).then(/* ... */);
+fetch(`https://codeyourfuture.herokuapp.com/api/clipboard?title=${clipboardTitle}`)
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(retorno2) {
+      return console.log(retorno2);
+    });
