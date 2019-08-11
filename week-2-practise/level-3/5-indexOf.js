@@ -6,6 +6,9 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
+  var index = arr.indexOf(valueToReplace);
+  var arr2 = arr.slice();
+
   return; // complete this statement
 }
 

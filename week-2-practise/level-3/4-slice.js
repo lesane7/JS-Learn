@@ -5,7 +5,9 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return; // complete this statement
+  newarr = arr.slice(1);
+  newarr(arr.indexOf(index)) = value;
+  return newarr; // complete this statement
 }
 
 /* 
