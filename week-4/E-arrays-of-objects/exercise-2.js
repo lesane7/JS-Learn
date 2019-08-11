@@ -40,11 +40,11 @@ WRITE YOUR CODE BELOW
 */
 
 
-var destinationNamesWithin500Kms = // Complete here
+var destinationNamesWithin500Kms = travelDestinations.filter(destinosLejanos => destinosLejanos.distanceKms <= 500).map(mapiemosaFilter => mapiemosaFilter.destinationName); // Complete here
 
-var destinationNameReachableByFerry = // Complete here
+var destinationNameReachableByFerry = travelDestinations.filter(soloEnFerry => soloEnFerry.transportations.includes("ferry")).map(mapiemosaFilter => mapiemosaFilter.destinationName); // Complete here
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(masDe300km => masDe300km.distanceKms > 300).filter(enTren => enTren.transportations.includes("train")).map(mapiemosaFilter => mapiemosaFilter.destinationName); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*

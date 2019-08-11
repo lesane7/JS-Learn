@@ -42,3 +42,4 @@ var writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+console.log(writers)

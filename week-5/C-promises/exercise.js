@@ -13,7 +13,7 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "A Promising
   Promise"
 */
-const pElement = document.querySelector('#exercise1');
+/* const pElement = document.querySelector('#exercise1');
 let food = 'Hamburguesa';
 let valor = 'Init';
 functionA(food).then(response =>{
@@ -45,6 +45,13 @@ function functionA(food) {
   , 2000)
 }
 )
+} */
+
+let ejercicio1 = document.querySelector("#exercise1");
+function exercise1() {
+  let promise1 = resolvedPromise().then(nombre => {
+    ejercicio1.innerHTML = nombre;
+  });
 }
 
 /*
@@ -56,8 +63,11 @@ function functionA(food) {
   EXPECTED RESULT: The #exercise2 element has textContent = "A Unpromising
   Promise"
 */
+let ejercicio2 = document.querySelector("#exercise2");
 function exercise2() {
-  var promise2 = rejectedPromise()
+  let promise2 = rejectedPromise().catch(nombre2 => {
+    ejercicio2.innerHTML = nombre2;
+  });
 }
 
 /*
@@ -69,8 +79,11 @@ function exercise2() {
 
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
+let ejercicio3 = document.querySelector("#exercise3");
 function exercise3() {
-  var promise3 = delayedPromise()
+  let promise3 = delayedPromise().then(nombre3 => {
+    ejercicio3.innerHTML = nombre3;
+  });
 }
 
 /*
@@ -84,8 +97,11 @@ function exercise3() {
   EXPECTED RESULT: The #exercise4 element has textContent = "A Promise from:
   YOUR NAME"
 */
+let ejercicio4 = document.querySelector("#exercise4");
 function exercise4() {
-  var promise4 = concatPromise()
+  let promise4 = concatPromise().then(nombre4 => {
+    ejercicio4.innerHTML = nombre4 + "Elkin Waldo";
+  });
 }
 
 /*
@@ -100,9 +116,11 @@ function exercise4() {
 
   EXPECTED RESULT: The #exercise5 element has textContent = "Hello Promises!"
 */
-
+let ejercicio5 = document.querySelector("#exercise5");
 function exercise5() {
-  // Write your implementation here
+  let promise5 = newPromise().then(nombre5 => {
+    ejercicio5.innerHTML = nombre5;
+  }); // Write your implementation here
 }
 
 /*
@@ -118,8 +136,11 @@ function exercise5() {
   EXPECTED RESULT: The #exercise6 element has textContent = "Something went
   wrong!"
 */
+let ejercicio6 = document.querySelector("#exercise6");
 function exercise6() {
-  // Write your implementation here
+  let promise6 = newPromise2().catch(nombre6 => {
+    ejercicio6.innerHTML = nombre6;
+  }); // Write your implementation here
 }
 
 
@@ -149,6 +170,14 @@ function delayedPromise() {
 
 function concatPromise() {
   return Promise.resolve('A Promise from: ')
+}
+
+function newPromise() {
+  return Promise.resolve("Hello Promises!");
+}
+
+function newPromise2() {
+  return Promise.reject("Something went wrong!");
 }
 
 exercise1()

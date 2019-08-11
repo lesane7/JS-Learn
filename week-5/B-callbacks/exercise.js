@@ -15,8 +15,10 @@
   the button is clicked
 */
 document.querySelector('#button1').addEventListener('click', exercise1)
+let ElkinW = document.querySelector('#exercise1');
 
 function exercise1() {
+  ElkinW.innerHTML = "Elkin Alarca!"
   // Write your implementation here
 }
 
@@ -34,9 +36,12 @@ function exercise1() {
   EXPECTED RESULT: The #exercise2 element has textContent = "Hello from the
   function caller"
 */
+let ejercicio2 = document.querySelector('#exercise2')
+
 functionThatCallsBack(exercise2)
 
 function exercise2(result) {
+  ejercicio2.innerHTML = result;
   // Write your implementation here
 }
 
@@ -56,10 +61,14 @@ function exercise2(result) {
   comment below (Hint: look below to see where exercise3 is called)
 */
 
+let ejercicio3 = document.querySelector('#exercise3')
+
 function exercise3(callback) {
+  ejercicio3.innerHTML = "Hello from the callback";
   // Write your implementation here
 
   // Write your explanation here
+  //Explicación: queryselector al elemento al cual le vamos a aplicar. Función estamos modificando directamente el HTML.
 }
 
 // 

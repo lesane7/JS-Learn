@@ -53,20 +53,21 @@ var restaurants = [restaurant1, restaurant2, restaurant3];
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
-
+var nombreRestaurantes = restaurants => restaurants.name;
 
 var restaurantFinderApplication = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
+
     findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
+        return restaurants.filter(restaurantes => restaurantes.totalSeats - restaurantes.numberOfCustomers >= numberOfPeople).map(nombreRestaurantes) // Complete here 
     },
     findRestaurantServingDish: function(dishName) {
-        // Complete here
+        return restaurants.filter(vamosPorEnsalada => vamosPorEnsalada.menu.includes(dishName)).map(nombreRestaurantes) // Complete here
     },
     countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
+        return restaurants.filter(ubicacionRestaurante => ubicacionRestaurante.address.area === area).length; // Complete here
     }
 };
 

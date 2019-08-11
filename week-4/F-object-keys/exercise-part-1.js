@@ -15,11 +15,11 @@ var mentorsAges = {
 
 // ONLY EDIT BELOW THIS LINE
 
-var mentorsNames = ;
+let mentorsNames = Object.keys(mentorsAges);
 
-var mentorsNamedUppercased = ;
+let mentorsNamedCapitalised = mentorsNames.map(nombreMentores => nombreMentores.toUpperCase());
 
 // ONLY EDIT ABOVE THIS LINE
 
-console.log(mentorsNamedUppercased);
+console.log(mentorsNamedCapitalised);
 // prints [ 'JAMES', 'JOSH', 'JAMIE', 'MOZAFAR' ]

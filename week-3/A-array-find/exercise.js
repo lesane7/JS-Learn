@@ -7,8 +7,15 @@
 
 var names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "Anastasia", "Karim", "Ahmed"];
 
-var longNameThatStartsWithA = findLongNameThatStartsWithA(names);
+//var longNameThatStartsWithA = findLongNameThatStartsWithA(names);
+//parámetro va a representar la variable names
+var longNameThatStartsWithA = names.find(EncontreElNombreConAmayuscula)
 
+function EncontreElNombreConAmayuscula(LosNombres) { 
+ 
+  return LosNombres[0] === "A" && LosNombres.length > 7;
+ }
+ // los nombres pasan por la funcion'EncontreElNombreConAmayuscula' Return y ejecuta, verifica que cumpla
 console.log(longNameThatStartsWithA);
 
 /* EXPECTED OUTPUT */

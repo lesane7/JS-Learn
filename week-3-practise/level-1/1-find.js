@@ -11,9 +11,12 @@ Find the oxygen level of the first safe planet - Oxygen between 19.5 and 23.5
 
 var oxygenLevels = [24.2, 11.3, 19.9, 23.1, 29.3, 20.2];
 
-var safeOxygenLevel; //Complete this statement
+var safePlanetOxygenLevel =  oxygenLevels.find((levels) => {   //Complete this statement
+  return levels >= 19.5 && levels <= 23.5;
+});
 
-console.log(safeOxygenLevel + "%");
+
+console.log(safePlanetOxygenLevel + "%");
 
 /*
 EXPECTED OUTPUT
